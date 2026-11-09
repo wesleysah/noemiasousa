@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noemia Sousa Advocacia</title>
+<meta name="description" content="Noemia Sousa — advogada especialista em Direito Previdenciário. Salário maternidade, aposentadoria, BPC/LOAS e benefícios do INSS. Atendimento em Mossoró/RN, Messias Targino/RN e online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=gambetta@500,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F4EE;
+    --white:#FFFFFF;
+    --ink:#282824;
+    --muted:#66645E;
+    --brown:#5E471F;
+    --brown-hover:#4B3918;
+    --accent:#8A6A3B;
+    --line:#E5DED2;
+    --badge-bg:#EEE4D3;
+    --badge-ink:#785C32;
+    --serif:"Gambetta", Georgia, "Times New Roman", serif;
+    --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --radius-lg:28px;
+    --radius:12px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+
+  .container{width:100%;max-width:1120px;margin:0 auto;padding:0 32px}
+
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent)}
+  .serif{font-family:var(--serif);font-weight:500;color:var(--ink)}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--brown);color:#fff;font-weight:600;font-size:15px;
+       padding:16px 22px;border-radius:4px;transition:background .25s ease, transform .25s ease, box-shadow .25s ease}
+  .btn:hover{background:var(--brown-hover);transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(94,71,31,.6)}
+  .btn svg{width:18px;height:18px;flex:none}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:var(--bg)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:96px;border-bottom:1px solid var(--line)}
+  .brand{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--ink)}
+  .nav-links{display:flex;gap:28px}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--brown);position:relative}
+  .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+  .nav-links a:hover::after{transform:scaleX(1)}
+  .nav .btn{font-size:13px;padding:11px 18px}
+
+  /* Hero */
+  .hero{padding:72px 0 120px}
+  .hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:center}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.2vw,52px);line-height:1.08;letter-spacing:-0.04em;margin:18px 0 22px}
+  .hero p{font-size:16px;line-height:1.6;color:var(--muted);max-width:440px;margin-bottom:34px}
+  .hero-photo{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:322/382;max-width:440px;justify-self:end;width:100%}
+  .hero-photo img{width:100%;height:100%;object-fit:cover}
+
+  /* Sobre */
+  .sobre{background:var(--white);padding:60px 0}
+  .sobre-grid{display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center;max-width:880px;margin:0 auto}
+  .sobre-photo{width:300px;aspect-ratio:276/343;border-radius:var(--radius-lg);overflow:hidden}
+  .sobre-photo img{width:100%;height:100%;object-fit:cover}
+  .sobre h2{font-size:clamp(28px,3vw,36px);line-height:1.1;letter-spacing:-0.025em;margin:16px 0 14px;max-width:320px}
+  .sobre p{font-size:15px;line-height:1.65;color:var(--muted);max-width:330px;margin-bottom:24px}
+
+  /* Áreas */
+  .areas{padding:64px 0 96px;text-align:center}
+  .section-title{font-family:var(--serif);font-weight:500;font-size:clamp(36px,4.5vw,52px);line-height:1.1;letter-spacing:-0.017em;margin:10px 0 8px}
+  .section-sub{font-size:17px;line-height:1.6;color:var(--muted)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:36px 28px;min-height:236px;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;transition:transform .35s ease, box-shadow .35s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(40,40,36,.35)}
+  .badge{background:var(--badge-bg);color:var(--badge-ink);font-size:10px;font-weight:700;letter-spacing:.8px;padding:6px 14px;border-radius:3px;margin-bottom:14px}
+  .card h3{font-family:var(--serif);font-weight:500;font-size:clamp(22px,2.4vw,27px);white-space:nowrap;line-height:1.1;margin-bottom:16px}
+  .card p{font-size:15px;line-height:1.55;color:var(--muted);max-width:240px}
+
+  /* Online */
+  .online{padding:0 0 120px}
+  .online-box{background:var(--white);border-radius:var(--radius);padding:80px 104px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .online h2{font-size:clamp(28px,3vw,36px);line-height:1.1;letter-spacing:-0.025em;margin:16px 0 22px;color:#000}
+  .online p{font-size:14px;color:var(--muted);margin-bottom:30px}
+  .online img{width:100%;max-width:360px;justify-self:center;animation:float 6s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+  /* Localização */
+  .local{padding:40px 0 120px;text-align:center}
+  .locais{display:grid;grid-template-columns:repeat(2,minmax(0,330px));gap:24px;justify-content:center;margin-top:56px;text-align:left}
+  .local-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .local-card iframe{display:block;width:100%;height:240px;border:0;filter:saturate(.9)}
+  .local-card .info{padding:28px 22px 26px}
+  .local-card h3{font-family:var(--serif);font-weight:500;font-size:27px;line-height:1.1;margin-bottom:14px}
+  .local-card p{font-size:15px;line-height:1.55;color:var(--muted)}
+
+  /* Footer */
+  footer{background:var(--brown);color:#fff}
+  .foot{display:flex;justify-content:space-between;gap:40px;padding:72px 32px 56px;max-width:880px;margin:0 auto}
+  .foot .brand{color:#fff;font-size:26px;margin-bottom:22px;display:block}
+  .foot p{color:rgba(255,255,255,.82);font-size:15px;line-height:1.6;max-width:330px}
+  .foot h4{font-size:11px;font-weight:700;letter-spacing:1.4px;margin-bottom:14px}
+  .foot ul{list-style:none;display:flex;flex-direction:column;gap:14px;font-size:15px}
+  .foot ul a{opacity:.92;transition:opacity .2s}
+  .foot ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}
+  .copy{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:22px 32px;font-size:13px;color:rgba(255,255,255,.75)}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.online img{animation:none}html{scroll-behavior:auto}}
+
+  /* Responsivo */
+  @media (max-width:900px){
+    .nav-links{display:none}
+    .hero{padding:48px 0 72px}
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-photo{justify-self:center;max-width:420px}
+    .sobre-grid{grid-template-columns:1fr;gap:36px;justify-items:center;text-align:center}
+    .sobre h2,.sobre p{max-width:420px;margin-left:auto;margin-right:auto}
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .online-box{grid-template-columns:1fr;padding:56px 32px;text-align:center}
+    .online-box .btn{justify-self:center}
+  }
+  @media (max-width:600px){
+    .container{padding:0 16px}
+    .nav{height:76px}
+    .brand{font-size:20px}
+    .nav .btn{padding:10px 14px;font-size:12px}
+    .cards{grid-template-columns:1fr}
+    .card{min-height:0}
+    .sobre-photo{width:100%;max-width:300px}
+    .locais{grid-template-columns:1fr}
+    .foot{flex-direction:column;padding:56px 16px 40px}
+    .online-box{padding:44px 20px}
+    .btn{font-size:14px;padding:15px 18px}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.24 8.24 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.39 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
+</svg>
+
+<header>
+  <div class="container">
+    <nav class="nav">
+      <a href="#" class="brand">Noemia Sousa</a>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#localizacao">Localização</a>
+      </div>
+      <a class="btn" href="https://wa.me/5584999465671" target="_blank" rel="noopener">Entre em contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow reveal">Direito Previdenciário • INSS</div>
+        <h1 class="reveal d1">Quando o assunto é INSS, eu não dependo da sorte, eu conheço o caminho.</h1>
+        <p class="reveal d2">Orientação estratégica para salário maternidade e benefícios previdenciários, com uma escuta atenta a cada história.</p>
+        <a class="btn reveal d3" href="https://wa.me/5584999465671" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Fale comigo no WhatsApp</a>
+      </div>
+      <div class="hero-photo reveal d2">
+        <img src="img/noemia-hero.jpg" alt="Noemia Sousa, advogada, sorrindo em seu escritório" width="928" height="1152">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-photo reveal">
+          <img src="img/noemia-sobre.jpg" alt="Noemia Sousa de óculos, apoiando o queixo na mão" loading="lazy" width="928" height="1152">
+        </div>
+        <div>
+          <div class="eyebrow reveal">Quem é Noemia Sousa</div>
+          <h2 class="serif reveal d1">Um atendimento jurídico que começa por ouvir você.</h2>
+          <p class="reveal d2">Sou advogada especialista em Direito Previdenciário. Atuo ajudando pessoas que tiveram benefícios negados, com orientação jurídica personalizada e sem respostas genéricas.</p>
+          <a class="btn reveal d3" href="https://wa.me/5584999465671" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Fale comigo no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Áreas de atuação -->
+  <section class="areas" id="servicos">
+    <div class="container">
+      <div class="eyebrow reveal">Como posso ajudar</div>
+      <h2 class="section-title reveal d1">Áreas de Atuação</h2>
+      <p class="section-sub reveal d2">Orientação clara e acompanhamento próximo para cada etapa do seu benefício.</p>
+
+      <div class="cards">
+        <article class="card reveal">
+          <span class="badge">MAIS PROCURADO</span>
+          <h3>Salário Maternidade</h3>
+          <p>Orientação para garantir seu direito com segurança, desde a análise até o requerimento.</p>
+        </article>
+        <article class="card reveal d1">
+          <h3>Pensão por Morte</h3>
+          <p>Amparo jurídico para orientar sua família na busca pelo benefício devido.</p>
+        </article>
+        <article class="card reveal d2">
+          <h3>Auxílio-Acidente</h3>
+          <p>Análise cuidadosa dos direitos decorrentes de acidentes e suas consequências.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Auxílio-Doença</h3>
+          <p>Suporte na concessão e manutenção do benefício por incapacidade temporária.</p>
+        </article>
+        <article class="card reveal d1">
+          <h3>Aposentadoria</h3>
+          <p>Planejamento e orientação para uma aposentadoria mais segura e justa.</p>
+        </article>
+        <article class="card reveal d2">
+          <h3>BPC/LOAS</h3>
+          <p>Orientação especializada para a proteção de idosos e pessoas com deficiência.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Atendimento online -->
+  <section class="online">
+    <div class="container">
+      <div class="online-box reveal">
+        <div>
+          <div class="eyebrow">Atendimento online</div>
+          <h2 class="serif">Seu direito não precisa esperar pela distância.</h2>
+          <p>Já ajudamos clientes em diversas regiões do país.</p>
+          <a class="btn" href="https://wa.me/5584999465671" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Fale comigo no WhatsApp</a>
+        </div>
+        <img src="img/notebook.png" alt="Notebook exibindo o site de Noemia Sousa" loading="lazy" width="1000" height="967">
+      </div>
+    </div>
+  </section>
+
+  <!-- Localização -->
+  <section class="local" id="localizacao">
+    <div class="container">
+      <div class="eyebrow reveal">Atendimento presencial</div>
+      <h2 class="section-title reveal d1">Onde atendo</h2>
+      <p class="section-sub reveal d2">Atendimento presencial com estrutura e confiança.</p>
+
+      <div class="locais">
+        <article class="local-card reveal">
+          <iframe title="Mapa — escritório em Mossoró/RN" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.4621013803626!2d-37.345493824279465!3d-5.189786052353417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ba06e106eb214d%3A0x2a2c965fa4ff9394!2sR.%20Meira%20e%20S%C3%A1%2C%20275%20-%20Centro%2C%20Mossor%C3%B3%20-%20RN%2C%2059610-120!5e0!3m2!1spt-BR!2sbr!4v1787598985709!5m2!1spt-BR!2sbr"></iframe>
+          <div class="info">
+            <h3>Mossoró/RN</h3>
+            <p>Rua: Meire e Sá, n° 275. Sala 208, Centro.</p>
+          </div>
+        </article>
+        <article class="local-card reveal d1">
+          <iframe title="Mapa — escritório em Messias Targino/RN" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.3746654896822!2d-37.515779124270104!3d-6.0801130596565836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bab0f8da759357%3A0xbda8e81f90f75380!2sR.%20Jorge%20Teixeira%2C%20Messias%20Targino%20-%20RN%2C%2059775-000!5e0!3m2!1spt-BR!2sbr!4v1787599084741!5m2!1spt-BR!2sbr"></iframe>
+          <div class="info">
+            <h3>Messias targino/RN</h3>
+            <p>Rua Jorge Teixeira, SN, Centro.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <div>
+      <span class="brand">Noemia Sousa</span>
+      <p>Direito Previdenciário com clareza, respeito e acompanhamento próximo.</p>
+    </div>
+    <div>
+      <h4>CONTATO</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/noemiasousaadv/" target="_blank" rel="noopener">@noemiasousaadv</a></li>
+        <li><a href="mailto:contato@noemiasousa.adv.br">contato@noemiasousa.adv.br</a></li>
+        <li><a href="https://wa.me/5584999465671" target="_blank" rel="noopener">(84) 99946-5671</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">© 2026 Noemia Sousa Advocacia. Todos os direitos reservados.</div>
+</footer>
+
+<script>
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+</body>
+</html>
